@@ -1,0 +1,11 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore virtual environment directory
+gm/
+
+# Ignore log files
+*.log
+
+# Ignore macOS system files
+.DS_Store
