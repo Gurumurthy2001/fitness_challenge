@@ -1,0 +1,48 @@
+{% extends "Fitness/base.html" %}
+{% load static %}
+{% block static %}
+  {% block stylesheet %}<link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock stylesheet %}
+{% endblock %}
+{% block header %}
+  <h1>Fitness & Yoga App</h1>
+    {% block nav %}
+      <nav>
+          <ul>
+              <li><a href="about">about</a></li>
+              <li><a href="contact">contact</a></li>
+              <li><a href="#">blog</a></li>
+              <li><a href="#">profile</a></li>
+          </ul>
+      </nav>
+    {% endblock nav %}
+{% endblock header %}
+ {% block content_heading %}
+        <h2>Welcome to our Fitness & Yoga Community!</h2>
+ {% endblock %}
+{% block section %}
+    <section>
+        <p>Start your journey to a healthier life with our expert-guided fitness and yoga programs.</p>
+        <p>Join us and embrace a balanced lifestyle.</p>
+        <a href="#" class="cta-button">Get Started</a>
+    </section>
+      <section>
+        <div class="features">
+            <div class="feature">
+                <h3>Personalized Workouts</h3>
+                <p>Enjoy customized workout plans tailored to your fitness goals and preferences.</p>
+            </div>
+          </div>  
+      </section>
+      <section>
+            <div class="feature">
+                <h3>Expert Instructors</h3>
+                <p>Learn from certified yoga and fitness instructors with years of experience.</p>
+            </div>
+      </section>
+      <section>
+            <div class="feature">
+                <h3>Community Support</h3>
+                <p>Connect with like-minded individuals, share your progress, and stay motivated together.</p>
+            </div>
+      </section>
+{% endblock section %}

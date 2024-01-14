@@ -12,7 +12,8 @@ class Challenge(models.Model):
 
 class UserProfile(models.Model):
   user=models.OneToOneField(User,on_delete=models.CASCADE)
-  profile_pic= models.ImageField(upload_to='profile_pic/',blank=True,null=True)
+  profile_picture= models.ImageField(upload_to='profile_pic/',blank=True,null=True)
+  date_of_birth = models.DateField(null=True, blank=True)
   bio_line= models.TextField()
   
   def __str__(self):

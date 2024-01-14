@@ -1,0 +1,97 @@
+/* Existing styles */
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #333;
+}
+
+section p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Additional styles for the Dashboard */
+.dashboard {
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.stat-box {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box h3 {
+    color: #333;
+}
+
+.stat-box p {
+    color: #555;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.activity-feed {
+    margin-top: 30px;
+}
+
+.activity-feed h3 {
+    color: #333;
+}
+
+.activity-feed ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.activity-feed li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}

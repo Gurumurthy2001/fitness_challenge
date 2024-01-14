@@ -1,0 +1,37 @@
+{% extends "Fitness/base.html" %}
+{% load static %}
+{% block static %}
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+  <div class="text-on-image1">Fitness and Meditation studio.</div></br></hr>
+  <div class="text-on-image2">
+    "Create a symphony of peace and strength as your mind and body find their perfect rhythm".
+  </div>
+  <div class="text-on-image3">
+    {% block section %}
+      <section>
+        <p>Start your journey to a healthier life with our expert-guided fitness and yoga programs.</p>
+        <p>Join us and embrace a balanced lifestyle.</p>
+        <a href="#" class="cta-button">Get Started</a>
+      </section>
+    {% endblock section %}
+  </div>
+  {% endblock stylesheet %}
+  
+{% endblock %}
+
+  {% block header %}
+  <h1>Fitness & Yoga App</h1>
+  {% block nav %}
+    <nav>
+        <ul>
+            <h4><li><a href="home/">Home</a></li></h4>
+            <h4><li><a href="about">about</a></li></h4>
+            <h4><li><a href="contact">contact</a></li><h4>
+            <h4><li><a href="register">register</a></li><h4>
+            <h4><li><a href="login">login</a></li><h4>
+            </ul>
+    </nav>
+  {% endblock nav %}
+{% endblock header %}
+{% block img %}<img src="/static/Image/med.jpg" alt="Fitness image">{% endblock img %}

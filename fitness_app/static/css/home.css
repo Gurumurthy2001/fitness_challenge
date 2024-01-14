@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+  color: #fff;
+}
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #4cae4c;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+header {
+    /* ... existing styles ... */
+    display: flex;
+    align-items: center; /* Align elements vertically within header */
+}
+
+nav ul {
+    /* ... existing styles ... */
+    display: flex; /* Display navigation links horizontally */
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
