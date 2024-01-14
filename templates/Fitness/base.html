@@ -8,19 +8,25 @@
       {% block stylesheet %}{% endblock stylesheet %}
     {% endblock %}
 </head>
-<body>
-   <header>
-   {% block header %}{% endblock header %}
+{% block content %}
+  <body>
+  
+    <header>
+      {% block header %}{% endblock header %}
     </header>
+    
     {% block img %} {% endblock img %}
    <!-- <img src="/static/Image/pale.jpg" alt="Background Image" class="bg-image"> -->
     <div class="content">
         {% block content_heading %}{% endblock %}
      <!--   {% block section %}{% endblock section %} -->
     </div>
+  
+  
 
     <footer>
         {% block footer %}<p>&copy; 2024 Fitness & Yoga App. All rights reserved.</p>{% endblock %}
     </footer>
-</body>
+  </body>
+{% endblock content %}
 </html>

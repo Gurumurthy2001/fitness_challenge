@@ -1,45 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "Fitness/base.html" %}
+{% load static %}
+{% block static %}
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  {% endblock stylesheet %}
+{% endblock static %}
+{% block content %}
+  <div class="login-container">
+    <img src="app-logo.png" alt="Yoga & Fitness App Logo" class="app-logo">
+    <h2>Login to Your Account</h2>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <title>Login - Fitness & Yoga App</title>
-</head>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-<body>
-    <header>
-        <h1>Fitness & Yoga App</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+        <button type="submit">Login</button>
+      </form>
+    <p class="register-link">Don't have an account? <a href="register.html">Sign up here</a></p>
+    <div class="help-section">
+        <p>Need help?</p>
+        <ul>
+            <li><a href="forgot-password.html">Forgot Password?</a></li>
+            <li><a href="contact/">Contact Support</a></li>
+        </ul>
+    </div>
+  </div>
+{% endblock content %}
 
-    <section>
-        <h2>Login</h2>
-        <p>Log in to your account to access personalized content and connect with the fitness community.</p>
-
-        <form action="#" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <input type="submit" value="Login" class="cta-button">
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Fitness & Yoga App. All rights reserved.</p>
-    </footer>
-</body>
-
-</html>
