@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register.css">
-    <title>Register - Fitness & Yoga App</title>
-</head>
-
-<body>
-    <header>
-        <h1>Fitness & Yoga App</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
-        </nav>
-    </header>
-
+{% extends "Fitness/base.html" %}
+{% load static %}
+{% block static %}
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+  {% endblock stylesheet %}
+{% endblock static %}
+{% block content %}
     <section>
+      <div class="login-container">
+      <img src="app-logo.png" alt="Yoga & Fitness App Logo" class="app-logo">
         <h2>Register</h2>
         <p>Create an account to access personalized content and join our fitness community.</p>
 
@@ -41,10 +28,4 @@
             <input type="submit" value="Register" class="cta-button">
         </form>
     </section>
-
-    <footer>
-        <p>&copy; 2024 Fitness & Yoga App. All rights reserved.</p>
-    </footer>
-</body>
-
-</html>
+{% endblock content %}

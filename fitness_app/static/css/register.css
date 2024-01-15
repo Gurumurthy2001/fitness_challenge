@@ -1,27 +1,5 @@
 /* Existing styles */
 
-nav {
-    text-align: center;
-    margin-top: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
-}
-
 section {
     max-width: 800px;
     margin: 20px auto;
@@ -33,6 +11,7 @@ section {
 
 section h2 {
     color: #333;
+    
 }
 
 section p {
@@ -75,11 +54,4 @@ form input[type="password"],
 form input[type="email"],
 form input[type="text"] {
     width: calc(100% - 22px);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
 }

@@ -1,48 +1,91 @@
 {% extends "Fitness/base.html" %}
 {% load static %}
 {% block static %}
-  {% block stylesheet %}<link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock stylesheet %}
-{% endblock %}
-{% block header %}
-  <h1>Fitness & Yoga App</h1>
-    {% block nav %}
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  {% endblock stylesheet %}
+{% endblock static %}
+{% block content %}
+  {% block header %}
+  <header>
+    <div class="logo">Yoga & Fitness</div>
       <nav>
-          <ul>
-              <li><a href="about">about</a></li>
-              <li><a href="contact">contact</a></li>
-              <li><a href="#">blog</a></li>
-              <li><a href="#">profile</a></li>
-          </ul>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#download">Download</a>
+        <a href="#community">Community</a>
+        <a href="#blog">Blog</a>
       </nav>
-    {% endblock nav %}
-{% endblock header %}
- {% block content_heading %}
-        <h2>Welcome to our Fitness & Yoga Community!</h2>
- {% endblock %}
-{% block section %}
-    <section>
-        <p>Start your journey to a healthier life with our expert-guided fitness and yoga programs.</p>
-        <p>Join us and embrace a balanced lifestyle.</p>
-        <a href="#" class="cta-button">Get Started</a>
-    </section>
-      <section>
-        <div class="features">
-            <div class="feature">
-                <h3>Personalized Workouts</h3>
-                <p>Enjoy customized workout plans tailored to your fitness goals and preferences.</p>
-            </div>
-          </div>  
-      </section>
-      <section>
-            <div class="feature">
-                <h3>Expert Instructors</h3>
-                <p>Learn from certified yoga and fitness instructors with years of experience.</p>
-            </div>
-      </section>
-      <section>
-            <div class="feature">
-                <h3>Community Support</h3>
-                <p>Connect with like-minded individuals, share your progress, and stay motivated together.</p>
-            </div>
-      </section>
-{% endblock section %}
+    </header>
+  {% endblock header %}
+
+  <section class="hero">
+      <h1>Transform Your Life with Yoga & Fitness</h1>
+      <p>Personalized workouts, nutrition guidance, and a supportive community to help you achieve your fitness goals.</p>
+      <a href="#download" class="cta-button">Start Your Journey</a>
+  </section>
+
+  <section id="features" class="features">
+      <div class="feature">
+          <img src="workout-icon.png" alt="Workout Icon">
+          <h2>Personalized Workouts</h2>
+          <p>Create and follow custom workout plans tailored to your fitness level and goals.</p>
+      </div>
+      <div class="feature">
+          <img src="nutrition-icon.png" alt="Nutrition Icon">
+          <h2>Nutrition Guidance</h2>
+          <p>Get personalized nutrition plans to complement your workouts and promote a healthy lifestyle.</p>
+      </div>
+    <!-- Add more feature sections as needed -->
+  </section>
+
+  <section id="testimonials" class="testimonials">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial">
+          <img src="user-avatar.jpg" alt="User Avatar">
+          <p>"I've never felt more energized and motivated. This app truly transformed my fitness journey!"</p>
+          <cite>- Emily, Yoga & Fitness Enthusiast</cite>
+      </div>
+    <!-- Add more testimonials as needed -->
+  </section>
+
+  <section id="challenges" class="challenges">
+      <h2>Join Our Fitness Challenges</h2>
+      <p>Participate in fun challenges, achieve milestones, and win exciting rewards.</p>
+      <a href="#download" class="cta-button">Start Challenge</a>
+  </section>
+  
+  <section id="community" class="community">
+    <h2>Fitness Community</h2>
+    <p>Connect with like-minded individuals, share your fitness achievements, and motivate each other.</p>
+</section>
+
+<section id="blog" class="blog">
+    <h2>Fitness Blog</h2>
+    <p>Explore our latest articles and tips on workouts, nutrition, and leading a healthy lifestyle.</p>
+    <a href="#read-more" class="cta-button">Read More</a>
+</section>
+
+<section id="download" class="download">
+      <h2>Download the App Today</h2>
+      <p>Start your fitness journey with our app. Available on iOS and Android.</p>
+      <div class="app-buttons">
+          <a href="#app-store" class="app-button">Download on the App Store</a>
+          <a href="#google-play" class="app-button">Get it on Google Play</a>
+      </div>
+  </section>
+
+
+{% block footer %}
+    <footer class="footer">
+      <p>&copy; 2024 Yoga & Fitness App. All rights reserved.</p>
+        <nav class="links">
+          <h3><a href="#about" class="foot">About Us</a></h3>
+          <h3><a href="#contact"class="foot">Contact</a></h3>
+          <h3><a href="#terms" class="foot">Terms of Service</a></h3>
+        </nav>
+    </footer>
+{% endblock footer %}
+{% endblock content %}
+

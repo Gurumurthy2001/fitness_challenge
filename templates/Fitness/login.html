@@ -18,12 +18,12 @@
 
         <button type="submit">Login</button>
       </form>
-    <p class="register-link">Don't have an account? <a href="register.html">Sign up here</a></p>
+    <p class="register-link">Don't have an account? <a href="{% url 'register' %}">Sign up here</a></p>
     <div class="help-section">
         <p>Need help?</p>
         <ul>
             <li><a href="forgot-password.html">Forgot Password?</a></li>
-            <li><a href="contact/">Contact Support</a></li>
+            <li><a href="{% url 'contact' %}">Contact Support</a></li>
         </ul>
     </div>
   </div>
