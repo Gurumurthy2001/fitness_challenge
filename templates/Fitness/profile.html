@@ -1,0 +1,24 @@
+
+{% extends "Fitness/base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="profile-card">
+    <img class="profile-picture" src="{{ user.userprofile.picture.url }}" alt="User Picture">
+    <div class="profile-details">
+      <h2>{{ user.username }}</h2>
+      <p class="bio">{{ user.userprofile.bio_line }}</p>
+      <p><strong>Date of Birth:</strong> {{ user.userprofile.DOB }}</p>
+      <p><strong>Gender:</strong> {{ user.userprofile.get_gender_display }}</p>
+      <p><strong>Address:</strong> {{ user.userprofile.address }}</p>
+    </div>
+  </div>
+  <a href="{% url 'login' %}" class="logout-link">Logout</a>
+{% endblock %}
+
+{% block static %}
+  {{ block.super }}
+  {% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/Profile.css' %}">
+  {% endblock stylesheet %}
+{% endblock static %}

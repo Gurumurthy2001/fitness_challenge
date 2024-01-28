@@ -7,77 +7,59 @@
 {% endblock static %}
 {% block content %}
   {% block header %}
-  <header>
-    <div class="logo">Yoga & Fitness</div>
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#challenges">Challenges</a>
-        <a href="#download">Download</a>
-        <a href="#community">Community</a>
-        <a href="#blog">Blog</a>
-      </nav>
+    <header>
+      <div class="logo">Yoga & Fitness</div>
+        <nav>
+          <a href="{% url 'profile' %}">profile</a>
+          <a href="{% url 'login' %}">Login</a>
+          <a href="{% url 'contact' %}">Contact</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="#community">Community</a>
+          <a href="#blog">Blog</a>
+        </nav>
     </header>
   {% endblock header %}
 
-  <section class="hero">
-      <h1>Transform Your Life with Yoga & Fitness</h1>
-      <p>Personalized workouts, nutrition guidance, and a supportive community to help you achieve your fitness goals.</p>
-      <a href="#download" class="cta-button">Start Your Journey</a>
-  </section>
-
-  <section id="features" class="features">
-      <div class="feature">
-          <img src="workout-icon.png" alt="Workout Icon">
-          <h2>Personalized Workouts</h2>
-          <p>Create and follow custom workout plans tailored to your fitness level and goals.</p>
+  <div class="card-container">
+    <div class="card">
+      <img src="your-image-url1.jpg" alt="Card Image 1">
+      <h2>Title 1</h2>
+      <p>Description of the card content 1.</p>
+      <div class="icons">
+        <a href="login" title="Icon 1"><img src="icon1.png" alt="Icon 1"></a>
+        <a href="#" title="Icon 2"><img src="icon2.png" alt="Icon 2"></a>
+        <a href="#" title="Icon 3"><img src="icon3.png" alt="Icon 3"></a>
       </div>
-      <div class="feature">
-          <img src="nutrition-icon.png" alt="Nutrition Icon">
-          <h2>Nutrition Guidance</h2>
-          <p>Get personalized nutrition plans to complement your workouts and promote a healthy lifestyle.</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+
+    <div class="card">
+      <img src="your-image-url2.jpg" alt="Card Image 2">
+      <h2>Title 2</h2>
+      <p>Description of the card content 2.</p>
+      <div class="icons">
+        <a href="#" title="Icon 1"><img src="icon1.png" alt="Icon 1"></a>
+        <a href="#" title="Icon 2"><img src="icon2.png" alt="Icon 2"></a>
+        <a href="#" title="Icon 3"><img src="icon3.png" alt="Icon 3"></a>
       </div>
-    <!-- Add more feature sections as needed -->
-  </section>
+      <a href="#" class="btn">Learn More</a>
+    </div>
 
-  <section id="testimonials" class="testimonials">
-      <h2>What Our Users Say</h2>
-      <div class="testimonial">
-          <img src="user-avatar.jpg" alt="User Avatar">
-          <p>"I've never felt more energized and motivated. This app truly transformed my fitness journey!"</p>
-          <cite>- Emily, Yoga & Fitness Enthusiast</cite>
+    <div class="card">
+      <img src="your-image-url3.jpg" alt="Card Image 3">
+      <h2>Title 3</h2>
+      <p>Description of the card content 3.</p>
+      <div class="icons">
+        <a href="#" title="Icon 1"><img src="icon1.png" alt="Icon 1"></a>
+        <a href="#" title="Icon 2"><img src="icon2.png" alt="Icon 2"></a>
+        <a href="#" title="Icon 3"><img src="icon3.png" alt="Icon 3"></a>
       </div>
-    <!-- Add more testimonials as needed -->
-  </section>
-
-  <section id="challenges" class="challenges">
-      <h2>Join Our Fitness Challenges</h2>
-      <p>Participate in fun challenges, achieve milestones, and win exciting rewards.</p>
-      <a href="#download" class="cta-button">Start Challenge</a>
-  </section>
-  
-  <section id="community" class="community">
-    <h2>Fitness Community</h2>
-    <p>Connect with like-minded individuals, share your fitness achievements, and motivate each other.</p>
-</section>
-
-<section id="blog" class="blog">
-    <h2>Fitness Blog</h2>
-    <p>Explore our latest articles and tips on workouts, nutrition, and leading a healthy lifestyle.</p>
-    <a href="#read-more" class="cta-button">Read More</a>
-</section>
-
-<section id="download" class="download">
-      <h2>Download the App Today</h2>
-      <p>Start your fitness journey with our app. Available on iOS and Android.</p>
-      <div class="app-buttons">
-          <a href="#app-store" class="app-button">Download on the App Store</a>
-          <a href="#google-play" class="app-button">Get it on Google Play</a>
-      </div>
-  </section>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+  </div>
 
 
-{% block footer %}
+  {% block footer %}
     <footer class="footer">
       <p>&copy; 2024 Yoga & Fitness App. All rights reserved.</p>
         <nav class="links">
@@ -86,6 +68,6 @@
           <h3><a href="#terms" class="foot">Terms of Service</a></h3>
         </nav>
     </footer>
-{% endblock footer %}
+  {% endblock footer %}
 {% endblock content %}
 

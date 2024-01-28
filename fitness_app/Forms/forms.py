@@ -1,7 +1,10 @@
+# forms.py
 from django import forms
-from .models import UserProfile
+from django.contrib.auth.models import User
+from fitness_app.models import UserProfile
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ['profile_picture', 'date_of_birth']  # Add more fields as needed
+        exclude = ['user']
+        fields = ['user','DOB','gender','address','bio_line', 'picture']

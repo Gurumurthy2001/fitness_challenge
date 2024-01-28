@@ -1,31 +1,44 @@
 {% extends "Fitness/base.html" %}
 {% load static %}
+
 {% block static %}
   {% block stylesheet %}
-  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
   {% endblock stylesheet %}
 {% endblock static %}
+
 {% block content %}
-    <section>
-      <div class="login-container">
+  <section>
+    <div class="login-container">
       <img src="app-logo.png" alt="Yoga & Fitness App Logo" class="app-logo">
-        <h2>Register</h2>
-        <p>Create an account to access personalized content and join our fitness community.</p>
+      <h2>Register</h2>
+      <p>Create an account to access personalized content and join our fitness community.</p>
 
-        <form action="#" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+      {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+            <li style="color: red;">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+      <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-            <input type="submit" value="Register" class="cta-button">
-        </form>
-    </section>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <input type="submit" value="Register" class="cta-button">
+      </form>
+    </div>
+  </section>
 {% endblock content %}

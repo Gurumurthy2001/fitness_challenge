@@ -1,189 +1,129 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f0f0;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  text-align: left;
+  width: auto;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo{
+  margin-top: 10px;
+  margin: 0 15px;
+  margin-right: auto;
+  
+}
+
+nav {
+  margin-top: 10px;
+  margin-left:  300px; /* Move the navigation links to the right */
 }
 
 nav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  margin-left: auto;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px;
-    background-color: #456325;
+.card-container {
+ /* display: flex;*/
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px; /* Adjust this margin as needed */
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: auto;
+  padding: 20px;
+  text-align: center;
+  margin: 15px;
 }
 
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 0;
-    background-color: #fff;
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-.feature {
-    text-align: center;
+.card h2 {
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.feature img {
-    width: 100px;
-    height: 100px;
+.card p {
+  color: #666;
 }
 
-.testimonials {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #f0f0f0;
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.testimonial img {
-    border-radius: 50%;
-    margin-bottom: 10px;
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 
-.challenges {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #fff;
-}
-
-.download {
-    text-align: center
-}
-
-/* ... (Previous CSS code) ... */
-
-.challenges h2,
-.download h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.download p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.app-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.app-button {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 0 10px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+.icons a {
+  text-decoration: none;
+  color: #333;
 }
 
 .footer {
-    background-color: #fff;
-    color: #333;
-    padding: 20px;
-    text-align: center;
+  width: auto;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* This ensures the footer sticks to the bottom */
 }
 
 .footer p {
-    margin: 0;
-    background-color: #333;
-    color: #fff;
+  margin: 0;
+  background-color: #333;
+  color: #fff;
 }
 
 .footer nav {
-    margin-top: 100px;
+  margin-top: 10px;
 }
 
 .footer a {
-    color: #333;
-    margin: 0 10px;
-    text-decoration: none;
+  color: #333;
+  margin: 0 20px;
+  text-decoration: none;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-nav {
-    margin-top: 10px;
-    
-}
+
 .foot {
   color: #333;
   text-align: center;
   margin-left: 20px;
-}
-/* Styles for Fitness Community Section */
-#community {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #f0f0f0;
-}
-
-#community h2 {
-    font-size: 24px;
-    color: #333;
-}
-
-#community p {
-    font-size: 16px;
-    color: #555;
-    margin-top: 20px;
-}
-
-/* Styles for Fitness Blog Section */
-#blog {
-    text-align: center;
-    padding: 50px 0;
-}
-
-#blog h2 {
-    font-size: 24px;
-    color: #333;
-}
-
-#blog p {
-    font-size: 16px;
-    color: #555;
-    margin-top: 20px;
-}
-
-#blog .cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    margin-top: 20px;
 }

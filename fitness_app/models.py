@@ -1,31 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
-
-class Challenge(models.Model):
-  title=models.CharField(max_length=255)
-  description=models.TextField()
-  duration=models.IntegerField()
   
-  def __str__(self):
-    return self.title
   
-
 class UserProfile(models.Model):
-  user=models.OneToOneField(User,on_delete=models.CASCADE)
-  profile_picture= models.ImageField(upload_to='profile_pic/',blank=True,null=True)
-  date_of_birth = models.DateField(null=True, blank=True)
-  bio_line= models.TextField()
-  
+  user = models.OneToOneField(User, on_delete=models.CASCADE)
+  picture = models.ImageField(upload_to='profile_pic', default='default.jpg')
+  DOB = models.DateField(null=True, blank=True)
+  gender = models.CharField(choices=[('male', 'Male'), ('female', 'Female')], max_length=6, default='male')
+  bio_line = models.TextField()
+  address = models.TextField(null=True, blank=True)
+
   def __str__(self):
-    return self.user.username
+    return f'{self.user.username} profile'
   
-  
-  
-class Activity(models.Model):
-  user=models.ForeignKey(User,on_delete=models.CASCADE)
-  challenge=models.ForeignKey(Challenge,on_delete=models.CASCADE)
-  date=models.DateField()
-  
-  def __str__(self):
-    return f'{self.user.username} - {self.challenge.title}'
   
