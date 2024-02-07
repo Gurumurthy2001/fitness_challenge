@@ -1,24 +1,64 @@
-
 {% extends "Fitness/base.html" %}
 {% load static %}
-
-{% block content %}
-  <div class="profile-card">
-    <img class="profile-picture" src="{{ user.userprofile.picture.url }}" alt="User Picture">
-    <div class="profile-details">
-      <h2>{{ user.username }}</h2>
-      <p class="bio">{{ user.userprofile.bio_line }}</p>
-      <p><strong>Date of Birth:</strong> {{ user.userprofile.DOB }}</p>
-      <p><strong>Gender:</strong> {{ user.userprofile.get_gender_display }}</p>
-      <p><strong>Address:</strong> {{ user.userprofile.address }}</p>
-    </div>
-  </div>
-  <a href="{% url 'login' %}" class="logout-link">Logout</a>
-{% endblock %}
-
 {% block static %}
   {{ block.super }}
   {% block stylesheet %}
     <link rel="stylesheet" href="{% static 'css/Profile.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   {% endblock stylesheet %}
 {% endblock static %}
+
+{% block content %}
+  {% block header %}
+    <header>
+      <div class="logo">
+        <nav>
+          <button style="float: right; margin-right: 10px;"><a href="{% url 'home' %}">Home</a></button>
+        </nav>
+      </div>
+    </header>
+  {% endblock header %}
+
+  <div class="profile-container">
+    <div class="profile-header">
+        <img src="{{ user.userprofile.picture.url }}" alt="Profile Picture">
+        <h1>{{ user.username }}</h1>
+        <p class="username">@{{ user.username }}</p>
+    </div>
+
+    <div class="profile-details" id="profile-details">
+      <center>
+        <p><strong>Bio:</strong> <span><br/>
+        <u>{{ user.userprofile.bio_line }}</u></span></p><br/>
+        <p><strong>Gender:</strong> <spa><u>{{ user.userprofile.get_gender_display }}</u></span></p><br/>
+        <p><strong>DOB:</strong> <span><u>{{ user.userprofile.DOB|date:"F d, Y" }}</u></span></p>
+      </center>
+    </div>
+
+    <div class="social-links">
+        <a href="mailto:{{ user.email }}"><i class="fas fa-envelope"></i></a>
+        <a href="{{ user.userprofile.github_link }}" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="{{ user.userprofile.twitter_link }}" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="{{ user.userprofile.instagram_link }}" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="followers-section">
+        <div class="followers-info">
+            <div>
+                <h3>Followers</h3>
+                <p>Number of followers</p>
+            </div>
+            <div>
+                <h3>Following</h3>
+                <p>Number of accounts followed</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <a href="{% url 'profileupdate' %}">Update Profile</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+  </div>
+{% endblock %}
+

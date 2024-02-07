@@ -1,0 +1,44 @@
+
+{% extends "Fitness/base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="update-profile-container">
+    <h2>Update Profile</h2>
+    <form method="post" enctype="multipart/form-data" action="{% url 'profile' %}">
+      {% csrf_token %}
+      <label for="picture">Profile Picture:</label>
+      <input type="file" id="picture" name="picture" accept="image/*">
+      
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio_line" rows="4" placeholder="Enter your bio...">{{ user.userprofile.bio_line }}</textarea>
+      
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="DOB">
+      
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      
+      <label for="github_link">GitHub Link:</label>
+      <input type="url" id="github_link" name="github_link" placeholder="Enter GitHub link" value="{{ user.userprofile.github_link }}">
+
+      <label for="twitter_link">Twitter Link:</label>
+      <input type="url" id="twitter_link" name="twitter_link" placeholder="Enter Twitter link" value="{{ user.userprofile.twitter_link }}">
+
+      <label for="instagram_link">Instagram Link:</label>
+      <input type="url" id="instagram_link" name="instagram_link" placeholder="Enter Instagram link" value="{{ user.userprofile.instagram_link }}">
+      
+      <button type="submit">Update Profile</button>
+    </form>
+  </div>
+{% endblock %}
+
+{% block static %}
+  {{ block.super }}
+  {% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/p_update.css' %}">
+  {% endblock stylesheet %}
+{% endblock static %}

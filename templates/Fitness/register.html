@@ -22,7 +22,7 @@
         </ul>
       {% endif %}
 
-      <form action="{% url 'login' %}" method="post">
+      <form action="{% url 'register' %}" method="post">
         {% csrf_token %}
 
         <label for="username">Username:</label>

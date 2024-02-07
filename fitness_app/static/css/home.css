@@ -26,7 +26,7 @@ header {
 
 nav {
   margin-top: 10px;
-  margin-left:  300px; /* Move the navigation links to the right */
+  margin-left:  300px;
 }
 
 nav a {
@@ -40,7 +40,7 @@ nav a {
  /* display: flex;*/
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 20px; /* Adjust this margin as needed */
+  margin-top: 20px;
 }
 
 .card {
@@ -95,7 +95,7 @@ nav a {
   color: #333;
   padding: 20px;
   text-align: center;
-  margin-top: auto; /* This ensures the footer sticks to the bottom */
+  margin-top: auto;
 }
 
 .footer p {

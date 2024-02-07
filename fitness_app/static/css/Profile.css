@@ -1,45 +1,142 @@
-/* static/css/Profile.css */
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
 
-.profile-card {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  max-width: 400px;
-  width: 100%;
-  margin: 20px auto;
-}
+        .profile-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-.profile-picture {
-  border-radius: 50%;
-  max-width: 150px;
-  width: 100%;
-}
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.profile-details {
-  flex-grow: 1;
-  padding: 20px;
-}
+        img {
+            border-radius: 50%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
 
-.profile-details h2 {
-  color: #075e54; /* WhatsApp green */
-  margin-bottom: 10px;
-}
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
 
-.profile-details p {
-  margin: 8px 0;
-  color: #666;
-}
-.logout-link {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #fff;
-  background-color: #075e54; /* WhatsApp green */
-  padding: 8px 12px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
+        .username {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .profile-details,
+        .social-links {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .profile-details p,
+        .social-links a {
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .profile-details input {
+            width: calc(100% - 20px);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #4CAF50;
+            margin: 0 15px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a i {
+            margin-right: 5px;
+        }
+
+        .social-links a:hover {
+            color: #45a049;
+        }
+
+        .followers-section {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .followers-section h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .followers-info {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .followers-info div {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .followers-info h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .followers-info p {
+            color: #666;
+        }
+
+        .actions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .actions a {
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .actions a:hover {
+            background-color: #45a049;
+        }
+        
+

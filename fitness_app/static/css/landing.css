@@ -41,8 +41,7 @@ footer {
 
 
 nav ul {
-    /* ... existing styles ... */
-    display: flex; /* Display navigation links horizontally */
+    display: flex;
 }
 
 body {
@@ -70,7 +69,7 @@ body {
     top: 20%;
     left: 36%;
     transform: translate(-50%, -50%);
-    color: #222; /* Text color on the image */
+    color: #222; 
     font-size: 40px;
     font-weight: bold;
     font-family: Serif;
@@ -80,7 +79,7 @@ body {
     top: 27%;
     left: 36%;
     transform: translate(-50%, -50%);
-    color: #222; /* Text color on the image */
+    color: #222; 
     font-size: 46px;
     font-weight: bold;
     font-family: Cursive;
@@ -90,7 +89,7 @@ body {
     top: 40%;
     left: 36%;
     transform: translate(-50%, -50%);
-    color: #222; /* Text color on the image */
+    color: #222;
     font-size: 25px;
     font-weight: normal;
     font-family: Arial;

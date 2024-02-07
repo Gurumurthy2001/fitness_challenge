@@ -9,7 +9,7 @@
   <div class="login-container">
     <img src="app-logo.png" alt="Yoga & Fitness App Logo" class="app-logo">
     <h2>Login to Your Account</h2>
-      <form method="post" action="{% url 'home' %}">
+      <form method="post" action="{% url 'login' %}?next={{ request.GET.next }}">
         {% csrf_token %}
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
